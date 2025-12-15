@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 80px 100px 1fr 1fr 1fr;
+    height: 100vh;
+    background-color: bisque;
+    padding-bottom: 8%;
+}
+
+.image {
+    grid-column: 1/ span 1;
+    grid-row: 1/ span 1;
+    background-color: rgb(214, 142, 91);
+    display: flex;
+    align-items: center;
+}
+
+.image>img {
+    height: 300px;
+}
+
+
+.header {
+    grid-column: 2 /span 2;
+    grid-row: 1/ span 1;
+    background-color: rgb(214, 142, 91);
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    font-size: 250%;
+}
+
+
+.header>h1 {
+    align-items: center;
+    justify-content: center;
+}
+
+.pos1 {
+    grid-column: 1/ span 1;
+    grid-row: 4 /span 1;
+}
+
+.pos2 {
+    grid-column: 2/ span 1;
+    grid-row: 4/ span 1;
+}
+
+.pos3 {
+    grid-column: 3/ sapn 1;
+    grid-row: 4/ span 1;
+}
+
+.pos4 {
+    grid-column: 1/ span 1;
+    grid-row: 5/ span 1;
+}
+
+.pos5 {
+    grid-column: 2/ span 1;
+    grid-row: 5/ span 1;
+}
+
+.pos6 {
+    grid-column: 3/ sapn 1;
+    grid-row: 5/ span 1;
+}
+
+.pos1,
+.pos2,
+.pos3,
+.pos4,
+.pos5,
+.pos6 {
+    border: 3px solid gray;
+    margin: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 200%;
+    padding-bottom: 3%;
+}
+
+.pos1>img,
+.pos2>img,
+.pos3>img,
+.pos4>img,
+.pos5>img,
+.pos6>img {
+    width: 70%;
+    height: auto;
+    margin-top: 3%;
+}
+
+
+.wyszukaj {
+    grid-column: 2/ span 1;
+    grid-row: 3/ span 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wyszukaj>input {
+    height: 40%;
+    width: 80%;
+    border-radius: 20px;
+    text-align: center;
+}
+
+input::placeholder {
+    color: black;
+    font-size: 170%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.menu {
+    background-color: rgb(214, 142, 91);
+    grid-column: 1 /span 1;
+    grid-row: 2/ span 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+.zaloguj {
+    background-color: rgb(214, 142, 91);
+    grid-column: 3 /span 1;
+    grid-row: 2/ span 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+
+.koszyk {
+    background-color: rgb(214, 142, 91);
+    grid-column: 2 /span 1;
+    grid-row: 2/ span 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+
+.kup {
+    background-color: rgb(214, 142, 91);
+    padding: 7%;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.kup>p {
+    font-size: 150%;
+}
+
+.menu,
+.koszyk,
+.zaloguj {
+    border: 2px solid black;
+    margin-top: 2%;
+    margin-left: 3%;
+    height: 90%;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 170%;
+}
+
+h3 {
+    font-size: 240%;
+    margin-top: 2%;
+}
+
+p {
+    font-size: 120%;
+}
+
+
+.koszyk:hover,
+.menu:hover,
+.zaloguj:hover,
+.kup:hover {
+    box-shadow: 5px 5px 10px black;
+}
+
+.pomoc {
+    grid-column: 1/ span 1;
+    grid-row: 6 /span 1;
+}
+
+.karty {
+    grid-column: 2/ span 1;
+    grid-row: 6 /span 1;
+}
+
+
+.onas {
+    grid-column: 3/ span 1;
+    grid-row: 6 /span 1;
+}
+
+
+.pomoc>h2,
+.karty>h2,
+.onas>h2 {
+    text-align: center;
+}

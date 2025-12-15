@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to top, bisque, rgba(255, 228, 196, 0.589));
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 9%;
+    justify-content: center;
+}
+
+
+
+.kontener {
+    background-color: rgb(214, 142, 91);
+    border-radius: 20px;
+    width: 23%;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-bottom: 2%;
+    border-bottom: 1px solid black;
+}
+
+.header>img {
+    margin-left: 3%;
+    margin-top: 3%;
+}
+
+.header>h1 {
+    margin-top: 12%;
+    margin-left: 5%;
+}
+
+
+hr {
+    width: 90%;
+    height: 1px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.inputy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputy>* {
+    margin: 2%;
+}
+
+
+input {
+    border-radius: 5px;
+}
+
+h1 {
+    flex: 80;
+    font-size: 250%;
+}
+
+button {
+    margin: 10%;
+    width: 50%;
+    height: 15%;
+    border-radius: 5px;
+    background: linear-gradient(to top, bisque, rgba(255, 228, 196, 0.589));
+}
+
+hr {
+    width: 90%;
+}
+
+button:hover {
+    background: linear-gradient(to top, rgba(255, 228, 196, 0.589), bisque);
+}
+
+.zarejestruj {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.zarejestruj>p {
+    font-size: 80%;
+}
