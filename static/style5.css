@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 80px 100px 1fr 1fr;
+    height: 100vh;
+    background-color: bisque;
+    padding-bottom: 8%;
+}
+
+
+.image {
+    grid-column: 1/ span 1;
+    grid-row: 1/ span 1;
+    background-color: rgb(214, 142, 91);
+    display: flex;
+    align-items: center;
+}
+
+.image>img {
+    height: 300px;
+}
+
+
+.header {
+    grid-column: 2 /span 2;
+    grid-row: 1/ span 1;
+    background-color: rgb(214, 142, 91);
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    font-size: 250%;
+}
+
+
+.header>h1 {
+    align-items: center;
+    justify-content: center;
+}
+
+
+.podziekowania {
+    grid-column: 2/ span 1;
+    grid-row: 3/ span 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    background-color: rgb(214, 142, 91);
+    grid-column: 1 /span 1;
+    grid-row: 2/ span 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+.zaloguj {
+    background-color: rgb(214, 142, 91);
+    grid-column: 3 /span 1;
+    grid-row: 2/ span 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+
+.koszyk {
+    background-color: rgb(214, 142, 91);
+    grid-column: 2 /span 1;
+    grid-row: 2/ span 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+
+.menu,
+.koszyk,
+.zaloguj {
+    border: 2px solid black;
+    margin-top: 2%;
+    margin-left: 3%;
+    height: 90%;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.koszyk:hover,
+.menu:hover,
+.zaloguj:hover,
+.kup:hover {
+    box-shadow: 5px 5px 10px black;
+}
+
+
+.pos1 {
+    grid-column: 2/ span 1;
+    grid-row: 4 /span 1;
+    border: 3px solid gray;
+    margin: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 200%;
+    padding-bottom: 3%;
+}
+
+.pos1>img {
+    width: 70%;
+    height: auto;
+    margin-top: 3%;
+}
+
+.pomoc {
+    grid-column: 1/ span 1;
+    grid-row: 6 /span 1;
+    padding-left: 4%;
+    background-color: rgb(214, 142, 91);
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.karty {
+    grid-column: 2/ span 1;
+    padding-bottom: 2%;
+    grid-row: 6 /span 1;
+    background-color: rgb(214, 142, 91);
+    padding-top: 2%;
+}
+
+
+.onas {
+    grid-column: 3/ span 1;
+    padding-bottom: 2%;
+    grid-row: 6 /span 1;
+    background-color: rgb(214, 142, 91);
+    padding-top: 2%;
+}
+
+
+.pomoc>h2,
+.karty>h2,
+.onas>h2 {
+    text-align: center;
+}

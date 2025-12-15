@@ -118,7 +118,7 @@ h2 {
     font-size: 170%;
 }
 
-h3{
+h3 {
     font-size: 170%;
 }
 
@@ -132,27 +132,27 @@ p {
     display: flex;
     justify-content: right;
     padding-right: 10%;
-    padding-top: 4%;
+    padding-bottom: 3%;
 }
 
-.but>img{
+.but>img {
     width: 60%;
     height: auto;
 }
 
-.opis{
+.opis {
     grid-column: 2 / span 1;
     grid-row: 4 /span 1;
 }
 
-.dostawa{
+.dostawa {
     grid-column: 3/ span 1;
     grid-row: 4 / span 1;
     display: flex;
     flex-direction: column;
 }
 
-.zamow{
+.zamow {
     background-color: rgb(214, 142, 91);
     padding: 7%;
     padding-bottom: 2%;
@@ -163,7 +163,7 @@ p {
     text-align: center;
 }
 
-.formularz{
+.formularz {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -171,42 +171,196 @@ p {
     padding: 2%;
 }
 
-.email{
+.email {
     grid-column: 1/ span 4;
     grid-row: 1 /span 1;
 }
 
-.imie{
+.imie {
     grid-column: 1 /span 2;
     grid-row: 2 /span 1;
 }
 
-.nazwisko{
+.nazwisko {
     grid-column: 3/ span 2;
     grid-row: 2 /span 1;
 }
 
-.ulica{
+.ulica {
     grid-column: 1 /span 2;
     grid-row: 3 /span 1;
 }
 
-.nrdomu{
+.nrdomu {
     grid-column: 3/ span 2;
     grid-row: 3 /span 1;
 }
 
-.kodpocztowy{
+.kodpocztowy {
     grid-column: 1 /span 1;
     grid-row: 4 /span 1;
 }
 
-.miejscowosc{
+.miejscowosc {
     grid-column: 2 /span 3;
     grid-row: 4 /span 1;
 }
 
-.numertel{
+.numertel {
     grid-column: 1 /span 4;
     grid-row: 5 /span 1;
+}
+
+
+.pomoc {
+    grid-column: 1/ span 1;
+    grid-row: 6 /span 1;
+    padding-left: 4%;
+    background-color: rgb(214, 142, 91);
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.karty {
+    grid-column: 2/ span 1;
+    padding-bottom: 2%;
+    grid-row: 6 /span 1;
+    background-color: rgb(214, 142, 91);
+    padding-top: 2%;
+}
+
+
+.onas {
+    grid-column: 3/ span 1;
+    padding-bottom: 2%;
+    grid-row: 6 /span 1;
+    background-color: rgb(214, 142, 91);
+    padding-top: 2%;
+}
+
+
+.pomoc>h2,
+.karty>h2,
+.onas>h2 {
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5% 2%;
+        height: auto;
+
+    }
+
+    .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+
+    .image>img {
+        width: 80%;
+        height: auto;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        font-size: 180%;
+        padding: 5px 0;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .wyszukaj {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .wyszukaj>input {
+        width: 100%;
+        height: 35px;
+        font-size: 120%;
+    }
+
+    .menu,
+    .koszyk,
+    .zaloguj {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        height: 60px;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
+
+    .but {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .but>img {
+        width: 70%;
+        height: auto;
+    }
+
+    .opis,
+    .dostawa {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .zamow {
+        width: 50%;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    .formularz {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .formularz>* {
+        width: 100%;
+    }
+
+    .pomoc,
+    .karty,
+    .onas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 95%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    h2,
+    h3 {
+        font-size: 140%;
+    }
+
+    p {
+        font-size: 110%;
+    }
 }

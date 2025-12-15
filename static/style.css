@@ -98,6 +98,15 @@ body {
     margin-top: 3%;
 }
 
+.pos1>p,
+.pos2>p,
+.pos3>p,
+.pos4>p,
+.pos5>p,
+.pos6>p {
+    margin-top: 2%;
+}
+
 
 .wyszukaj {
     grid-column: 2/ span 1;
@@ -155,14 +164,24 @@ input::placeholder {
 .kup {
     background-color: rgb(214, 142, 91);
     padding: 7%;
-    padding-bottom: 2%;
-    padding-top: 2%;
+    padding-bottom: 4%;
+    padding-top: 4%;
     border: 2px solid black;
     border-radius: 10px;
+    font-size: 150%;
+    text-align: center;
 }
 
-.kup>p {
-    font-size: 150%;
+.link {
+    width: 40%;
+    color: black;
+    text-decoration: none;
+}
+
+.koszyk,
+.zaloguj {
+    color: black;
+    text-decoration: none;
 }
 
 .menu,
@@ -181,7 +200,7 @@ h2 {
 }
 
 h3 {
-    font-size: 240%;
+    font-size: 170%;
     margin-top: 2%;
 }
 
@@ -200,17 +219,27 @@ p {
 .pomoc {
     grid-column: 1/ span 1;
     grid-row: 6 /span 1;
+    padding-left: 4%;
+    background-color: rgb(214, 142, 91);
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 .karty {
     grid-column: 2/ span 1;
+    padding-bottom: 2%;
     grid-row: 6 /span 1;
+    background-color: rgb(214, 142, 91);
+    padding-top: 2%;
 }
 
 
 .onas {
     grid-column: 3/ span 1;
+    padding-bottom: 2%;
     grid-row: 6 /span 1;
+    background-color: rgb(214, 142, 91);
+    padding-top: 2%;
 }
 
 
@@ -218,4 +247,75 @@ p {
 .karty>h2,
 .onas>h2 {
     text-align: center;
+}
+
+
+
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header,
+    .image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .wyszukaj>input {
+        height: 80%;
+        width: 80%;
+        border-radius: 20px;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .pos1,
+    .pos2,
+    .pos3,
+    .pos4,
+    .pos5,
+    .pos6 {
+        width: 90%;
+        margin: 5% auto;
+        line-height: 150%;
+    }
+
+    .pos1>img,
+    .pos2>img,
+    .pos3>img,
+    .pos4>img,
+    .pos5>img,
+    .pos6>img {
+        width: 80%;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 140%;
+    }
+
+    h3 {
+        font-size: 130%;
+    }
+
+    p {
+        font-size: 110%;
+    }
+
+    .pomoc,
+    .karty,
+    .onas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 95%;
+        text-align: center;
+        padding: 10px 0;
+        margin-left: 3%;
+    }
+
 }

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklep</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="image">
+        <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="" height="200px">
+    </div>
+
+    <div class="header">
+        <h1>Sklep Internetowy</h1>
+    </div>
+
+    <div class="menu">
+        <h2>Kategorie</h2>
+    </div>
+
+    <a class="koszyk" href="{{ url_for('koszyk')}}">
+        <div>
+            <h2>Koszyk</h2>
+        </div>
+
+    </a>
+
+    <a class="zaloguj" href="{{ url_for('login_page') }}">
+        <div>
+            <h2>Zaloguj</h2>
+        </div>
+
+    </a>
+
+
+
+    <div class="wyszukaj">
+        <input type="text" placeholder="Wyszukaj..">
+    </div>
+
+    <div class="pos1">
+        <img src="{{ url_for('static', filename='img/but1.webp') }}" alt="">
+        <h3>Buty do biegania męskie Nike Vomero 18 </h3>
+        <p>Cena: <strong>423.0zł</strong></p>
+        <a class="link" href="{{ url_for('kupteraz1') }}">
+            <div class="kup">
+                Kup Teraz
+            </div>
+        </a>
+    </div>
+
+
+
+
+    <div class="pos2">
+        <img src="{{ url_for('static', filename='img/but2.webp') }}" alt="">
+        <h3>Air Jordan 1 Mid Wmns 'Vivid Sulfer'</h3>
+        <p>Cena: <strong>550.0zł</strong></p>
+        <a class="link" href="{{ url_for('kupteraz2') }}">
+            <div class="kup">
+                Kup Teraz
+            </div>
+        </a>
+    </div>
+
+
+
+
+    <div class="pos3">
+        <img src="{{ url_for('static', filename='img/but3.webp') }}" alt="">
+        <h3>Buty do biegania męskie HOKA Challenger 8</h3>
+        <p>Cena: <strong>324.0zł</strong></p>
+        <a class="link" href="{{ url_for('kupteraz3') }}">
+            <div class="kup">
+                Kup Teraz
+            </div>
+        </a>
+    </div>
+
+
+
+    <div class="pos4">
+        <img src="{{ url_for('static', filename='img/but1.webp') }}" alt="">
+        <h3>Buty do biegania męskie Nike Vomero 18 </h3>
+        <p>Cena: <strong>423.0zł</strong></p>
+        <a class="link" href="{{ url_for('kupteraz1') }}">
+            <div class="kup">
+                Kup Teraz
+            </div>
+        </a>
+    </div>
+
+
+
+    <div class="pos5">
+        <img src="{{ url_for('static', filename='img/but2.webp') }}" alt="">
+        <h3>Air Jordan 1 Mid Wmns 'Vivid Sulfer'</h3>
+        <p>Cena: <strong>550.0zł</strong></p>
+        <a class="link" href="{{ url_for('kupteraz2') }}">
+            <div class="kup">
+                Kup Teraz
+            </div>
+        </a>
+    </div>
+
+
+    <div class="pos6">
+        <img src="{{ url_for('static', filename='img/but3.webp') }}" alt="">
+        <h3>Buty do biegania męskie HOKA Challenger 8</h3>
+        <p>Cena: <strong>324.0zł</strong></p>
+        <a class="link" href="{{ url_for('kupteraz3') }}">
+            <div class="kup">
+                Kup Teraz
+            </div>
+        </a>
+    </div>
+
+    <div class="pomoc">
+        <h2>Kontak i Pomoc</h2>
+        <ul>
+            <li>Wszystkie tematy</li>
+            <li>Śledzenie przesyłki</li>
+            <li>Możliwe metody płatności</li>
+            <li>Procedura zwrotu</li>
+            <li>Zapisz się do newslettera</li>
+            <li>Reklamacja</li>
+            <li>Zgłoś lukę w zabezpieczeniach</li>
+        </ul>
+    </div>
+
+    <div class="karty">
+        <h2>Karty podarunkowe</h2>
+        <ul>
+            <li>Kup kartę upominkową</li>
+            <li>Realizacja karty upominkowej</li>
+        </ul>
+    </div>
+
+    <div class="onas">
+        <h2>O nas</h2>
+        <ul>
+            <li>Nasza strona korporacyjna</li>
+            <li>Kariera</li>
+            <li>Prasa</li>
+            <li>Relacje inwestorskie</li>
+        </ul>
+    </div>
+
+    <div class="pomoc">
+        <h2>Kontak i Pomoc</h2>
+        <ul>
+            <li>Wszystkie tematy</li>
+            <li>Śledzenie przesyłki</li>
+            <li>Możliwe metody płatności</li>
+            <li>Procedura zwrotu</li>
+            <li>Zapisz się do newslettera</li>
+            <li>Reklamacja</li>
+            <li>Zgłoś lukę w zabezpieczeniach</li>
+        </ul>
+    </div>
+
+    <div class="karty">
+        <h2>Karty podarunkowe</h2>
+        <ul>
+            <li>Kup kartę upominkową</li>
+            <li>Realizacja karty upominkowej</li>
+        </ul>
+    </div>
+
+    <div class="onas">
+        <h2>O nas</h2>
+        <ul>
+            <li>Nasza strona korporacyjna</li>
+            <li>Kariera</li>
+            <li>Prasa</li>
+            <li>Relacje inwestorskie</li>
+        </ul>
+    </div>
+</body>
+
+</html>

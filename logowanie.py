@@ -12,7 +12,7 @@ try:
     print("Baza otwarta")
 
 except Exception as e:
-    print("Baza ma problem" + e)
+    print(f"Baza ma problem {e}")
 
 app = Flask(__name__)
 
@@ -39,7 +39,7 @@ logowanie = Logowanie()
 
 @app.route("/")
 def sklep():
-    return render_template("sklep.html")
+    return render_template("index.html")
 
 @app.route("/login", methods=["GET", "POST"])
 def login_page():
@@ -68,6 +68,30 @@ def kupteraz1():
 @app.route("/kupteraz_nike")
 def kupteraz2():
     return render_template("kupteraz2.html")
+
+
+@app.route("/hoka_run")
+def kupteraz3():
+    return render_template("kupteraz3.html")
+
+@app.route('/Koszyk')
+def koszyk():
+    return render_template('koszyk.html')
+
+@app.route("/zakup", methods=['GET', 'POST'])
+def zakup():
+
+    but = request.form['but']
+    
+
+    if but == 'nike_run':
+        return render_template('zakup1.html')
+    
+    elif but == 'but_nike':
+        return render_template('zakup2.html')
+    
+    elif but == 'hoka':
+        return render_template('zakup3.html')
 
 
 if __name__ == "__main__":

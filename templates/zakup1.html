@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style5.css')}}">
+</head>
+
+<body>
+    <div class="image">
+        <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="" height="200px">
+    </div>
+
+    <div class="header">
+        <h1>Sklep Internetowy</h1>
+    </div>
+
+    <div class="menu">
+        <h2>Kategorie</h2>
+    </div>
+    <div class="koszyk">
+        <a href="{{ url_for('koszyk')}}">
+            <h2>Koszyk</h2>
+        </a>
+    </div>
+    <div class="zaloguj">
+        <a href="{{ url_for('login_page') }}">
+            <h2>Zaloguj</h2>
+        </a>
+    </div>
+    <div class="podziekowania">
+        <h3>Dziękujemy za zakup: </h3>
+    </div>
+
+
+    <div class="pos1">
+        <img src="{{ url_for('static', filename='img/but1.webp') }}" alt="">
+        <h3>Buty do biegania męskie Nike Vomero 18 </h3>
+        <p>Cena: <strong>423.0zł</strong></p>
+    </div>
+
+
+    <div class="pomoc">
+        <h2>Kontak i Pomoc</h2>
+        <ul>
+            <li>Wszystkie tematy</li>
+            <li>Śledzenie przesyłki</li>
+            <li>Możliwe metody płatności</li>
+            <li>Procedura zwrotu</li>
+            <li>Zapisz się do newslettera</li>
+            <li>Reklamacja</li>
+            <li>Zgłoś lukę w zabezpieczeniach</li>
+        </ul>
+    </div>
+
+    <div class="karty">
+        <h2>Karty podarunkowe</h2>
+        <ul>
+            <li>Kup kartę upominkową</li>
+            <li>Realizacja karty upominkowej</li>
+        </ul>
+    </div>
+
+    <div class="onas">
+        <h2>O nas</h2>
+        <ul>
+            <li>Nasza strona korporacyjna</li>
+            <li>Kariera</li>
+            <li>Prasa</li>
+            <li>Relacje inwestorskie</li>
+        </ul>
+    </div>
+
+
+</body>
+
+</html>

@@ -61,3 +61,36 @@ select {
     border-radius: 10px;
     height: 25px;
 }
+
+.pomoc {
+    grid-column: 1/ span 1;
+    grid-row: 6 /span 1;
+    padding-left: 4%;
+    background-color: rgb(214, 142, 91);
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.karty {
+    grid-column: 2/ span 1;
+    padding-bottom: 2%;
+    grid-row: 6 /span 1;
+    background-color: rgb(214, 142, 91);
+    padding-top: 2%;
+}
+
+
+.onas {
+    grid-column: 3/ span 1;
+    padding-bottom: 2%;
+    grid-row: 6 /span 1;
+    background-color: rgb(214, 142, 91);
+    padding-top: 2%;
+}
+
+
+.pomoc>h2,
+.karty>h2,
+.onas>h2 {
+    text-align: center;
+}
