@@ -1,5 +1,4 @@
 Flask
-guincorn
+gunicorn
 pymongo
-dotenv
-os
+python-dotenv
