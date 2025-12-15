@@ -6,7 +6,13 @@ import os
 load_dotenv()
 KEY = os.getenv("MONGO_URI")
 client = MongoClient(KEY)
-client.admin.command("ping")
+
+try:
+    client.admin.command("ping")
+    print("Baza otwarta")
+
+except Exception as e:
+    print("Baza ma problem" + e)
 
 app = Flask(__name__)
 
