@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
+</head>
+<body>
+    <div class="image">
+        <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="" height="200px">
+    </div>
+
+    <div class="header">
+        <h1>Sklep Internetowy</h1>
+    </div>
+
+    <div class="menu">
+        <h2>Kategorie</h2>
+    </div>
+    <div class="koszyk">
+        <h2>Koszyk</h2>
+    </div>
+    <div class="zaloguj">
+        <h2><a href="{{ url_for('login_page') }}">Zaloguj</a></h2>
+    </div>
+    <div class="wyszukaj">
+        <input type="text" placeholder="Wyszukaj..">
+    </div>
+
+
+    <div class="but">
+        <img src="{{ url_for('static', filename='img/but2.webp') }}" alt="">
+    </div>
+
+    <div class="opis">
+        <h3>Air Jordan 1 Mid Wmns 'Vivid Sulfer'</h3><br>
+        <p>Buty Air Jordan 1 Mid prezentują wszechstronny styl na korcie i najwyższy komfort, zapewniając legendarny wygląd.
+            Podeszwa Air-Sole zapewnia amortyzację na twardym drewnie, a wyściełany kołnierz zapewnia wsparcie.</p><br><br>
+        <p>Cena: <strong>550.0zł</strong></p>
+        <label for="">Wybierz rozmiar: <input type="number"></label>
+    </div>
+
+    <div class="dostawa">
+        <label for="">Podaj date dostawy: <input type="date"></label>
+        <label for="">Podaj metode dostawy: <select name="" id="">
+            <option value="kurier">Kurier</option>
+            <option value="paczkomat">Paczkomat</option>
+            <option value="pp">Poczta Polska</option>
+        </select></label>
+        <div class="formularz">
+            <input type="text" class="email" placeholder="E-mail">
+            <input type="text" class="imie" placeholder="Imie">
+            <input type="text" class="nazwisko" placeholder="Nazwisko">
+            <input type="text" class="ulica" placeholder="Ulica">
+            <input type="number" class="nrdomu" placeholder="Nr domu">
+            <input type="number" class="kodpocztowy" placeholder="Kod pocztowy">
+            <input type="text" class="miejscowosc" placeholder="Miejscowość">
+            <input type="number" class="numertel" placeholder="Numer telefonu">
+        </div>
+        <p>Zalecane jest zamówienie jako klient naszego sklepu <br>
+            W tym celu zaloguj się tutaj: <a href="{{ url_for('login_page') }}">Zaloguj</a>
+        </p>
+        <div class="zamow">
+            <p>Zamów</p>
+        </div>
+    </div>
+    
+</body>
+</html>

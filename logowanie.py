@@ -61,5 +61,14 @@ def register_page():
     
     return render_template("rejestracja.html", msg=msg)
 
+@app.route("/kupteraz_nike_run")
+def kupteraz1():
+    return render_template("kupteraz1.html")
+
+@app.route("/kupteraz_nike")
+def kupteraz2():
+    return render_template("kupteraz2.html")
+
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(debug=True)
