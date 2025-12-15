@@ -255,32 +255,59 @@ p {
     body {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        padding: 5% 2%;
+        height: auto;
     }
 
-    .header,
     .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        padding-top: 2%;
+    }
+
+    .image>img {
+        width: 80%;
+        height: auto;
+    }
+
+    .header {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+        width: 90%;
+        font-size: 180%;
+        padding: 5px 0;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .wyszukaj {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        margin: 10px 0;
     }
 
     .wyszukaj>input {
-        height: 80%;
-        width: 80%;
-        border-radius: 20px;
-        text-align: center;
-        margin-top: 5%;
+        width: 100%;
+        height: 35px;
+        font-size: 120%;
     }
 
-    .pos1,
-    .pos2,
-    .pos3,
-    .pos4,
-    .pos5,
-    .pos6 {
-        width: 90%;
-        margin: 5% auto;
-        line-height: 150%;
+    .menu,
+    .koszyk,
+    .zaloguj {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        height: 60px;
+        margin: 5px 0;
+        box-sizing: border-box;
     }
 
     .pos1>img,
@@ -315,7 +342,6 @@ p {
         width: 95%;
         text-align: center;
         padding: 10px 0;
-        margin-left: 3%;
     }
 
 }

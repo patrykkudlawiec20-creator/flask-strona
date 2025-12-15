@@ -3,39 +3,39 @@ from pymongo import MongoClient
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
-KEY = os.getenv("MONGO_URI")
-client = MongoClient(KEY)
+# load_dotenv()
+# KEY = os.getenv("MONGO_URI")
+# client = MongoClient(KEY)
 
-try:
-    client.admin.command("ping")
-    print("Baza otwarta")
+# try:
+#     client.admin.command("ping")
+#     print("Baza otwarta")
 
-except Exception as e:
-    print(f"Baza ma problem {e}")
+# except Exception as e:
+#     print(f"Baza ma problem {e}")
 
 app = Flask(__name__)
 
-class Logowanie:
-    def __init__(self):
-        db = client["Logowanie"]
-        self.konta = db["Konta"]
+# class Logowanie:
+#     def __init__(self):
+#         db = client["Logowanie"]
+#         self.konta = db["Konta"]
 
-    def zaloguj(self, login, haslo):
-        user = self.konta.find_one({"Login": login})
-        if not user:
-            return "Zły login"
-        if user["Haslo"] == haslo:
-            return "Zalogowano pomyślnie"
-        return "Błędne hasło"
+#     def zaloguj(self, login, haslo):
+#         user = self.konta.find_one({"Login": login})
+#         if not user:
+#             return "Zły login"
+#         if user["Haslo"] == haslo:
+#             return "Zalogowano pomyślnie"
+#         return "Błędne hasło"
 
-    def zarejestruj(self, login, haslo):
-        if self.konta.find_one({"Login": login}):
-            return "Konto już istnieje"
-        self.konta.insert_one({"Login": login, "Haslo": haslo})
-        return "Konto zostało utworzone"
+#     def zarejestruj(self, login, haslo):
+#         if self.konta.find_one({"Login": login}):
+#             return "Konto już istnieje"
+#         self.konta.insert_one({"Login": login, "Haslo": haslo})
+#         return "Konto zostało utworzone"
 
-logowanie = Logowanie()
+# logowanie = Logowanie()
 
 @app.route("/")
 def sklep():
@@ -44,19 +44,19 @@ def sklep():
 @app.route("/login", methods=["GET", "POST"])
 def login_page():
     msg = ""
-    if request.method == "POST":
-        login_val = request.form["login"]
-        haslo_val = request.form["haslo"]
-        msg = logowanie.zaloguj(login_val, haslo_val)
+    # if request.method == "POST":
+    #     login_val = request.form["login"]
+    #     haslo_val = request.form["haslo"]
+    #     msg = logowanie.zaloguj(login_val, haslo_val)
     return render_template("login.html", msg=msg)
 
 @app.route("/register", methods=["GET", "POST"])
 def register_page():
     msg=''
-    if request.method == "POST":
-        login_val = request.form["login"]
-        haslo_val = request.form["haslo"]
-        msg = logowanie.zarejestruj(login_val, haslo_val)
+    # if request.method == "POST":
+    #     login_val = request.form["login"]
+    #     haslo_val = request.form["haslo"]
+    #     msg = logowanie.zarejestruj(login_val, haslo_val)
 
     
     return render_template("rejestracja.html", msg=msg)
