@@ -17,9 +17,12 @@
         <h1>Sklep Internetowy</h1>
     </div>
 
-    <div class="menu">
-        <h2>Kategorie</h2>
-    </div>
+    <a class="menu" href="{{url_for('sklep')}}">
+        <div>
+            <h2>Strona glówna</h2>
+        </div>
+    </a>
+
     <a class="koszyk" href="{{ url_for('koszyk')}}">
         <div>
             <h2>Koszyk</h2>
@@ -71,8 +74,7 @@
             <input type="text" class="miejscowosc" placeholder="Miejscowość">
             <input type="number" class="numertel" placeholder="Numer telefonu">
         </div>
-        <p>Zalecane jest zamówienie jako klient naszego sklepu <br>
-            W tym celu zaloguj się tutaj: <a class="link_log" href="{{ url_for('login_page') }}">Zaloguj</a>
+        <p>Przed zakupem należy się zalogować: <a class="link_log" href="{{ url_for('login_page') }}">Zaloguj</a>
         </p>
 
         <form class="przycisk" action="/zakup" method="post">

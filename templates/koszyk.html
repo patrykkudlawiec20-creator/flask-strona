@@ -17,9 +17,12 @@
         <h1>Sklep Internetowy</h1>
     </div>
 
-    <div class="menu">
-        <h2>Kategorie</h2>
-    </div>
+    <a class="menu" href="{{url_for('sklep')}}">
+        <div>
+            <h2>Strona glówna</h2>
+        </div>
+    </a>
+
     <div class="koszyk">
         <h2>Koszyk</h2>
     </div>
@@ -30,11 +33,37 @@
 
     </a>
 
+
+    {% if nike_run %}
     <div class="pos1">
         <img src="{{ url_for('static', filename='img/but1.webp') }}" alt="">
         <h3>Buty do biegania męskie Nike Vomero 18 </h3>
         <p>Cena: <strong>423.0zł</strong></p>
+        <p>Zamówiono {{nike_run}} zamówienie</p>
     </div>
+    {% endif %}
+
+
+    {% if but_nike %}
+    <div class="pos2">
+        <img src="{{ url_for('static', filename='img/but2.webp') }}" alt="">
+        <h3>Air Jordan 1 Mid Wmns 'Vivid Sulfer'</h3>
+        <p>Cena: <strong>550.0zł</strong></p>
+        <p>Zamówiono {{but_nike}} zamówienie</p>
+    </div>
+    {% endif %}
+
+
+    {% if hoka %}
+    <div class="pos3">
+        <img src="{{ url_for('static', filename='img/but3.webp') }}" alt="">
+        <h3>Buty do biegania męskie HOKA Challenger 8</h3>
+        <p>Cena: <strong>324.0zł</strong></p>
+        <p>Zamówiono {{hoka}} zamówienie</p>
+    </div>
+    {% endif %}
+
+
 
     <div class="pomoc">
         <h2>Kontak i Pomoc</h2>
