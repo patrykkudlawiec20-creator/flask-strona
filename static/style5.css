@@ -8,15 +8,27 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 80px 100px 1fr 1fr;
     height: 100vh;
-    background-color: bisque;
+    background-color: #f5f5f5;
     padding-bottom: 8%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', sans-serif;
 }
 
 
 .image {
     grid-column: 1/ span 1;
     grid-row: 1/ span 1;
-    background-color: rgb(214, 142, 91);
+    background-color: #1e293b;
     display: flex;
     align-items: center;
 }
@@ -29,7 +41,8 @@ body {
 .header {
     grid-column: 2 /span 2;
     grid-row: 1/ span 1;
-    background-color: rgb(214, 142, 91);
+    background-color: #1e293b;
+    color: white;
     display: flex;
     align-items: center;
     padding-left: 10%;
@@ -42,6 +55,9 @@ body {
     justify-content: center;
 }
 
+a {
+    text-decoration-line: none;
+}
 
 .podziekowania {
     grid-column: 2/ span 1;
@@ -49,10 +65,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 250%;
 }
 
 .menu {
-    background-color: rgb(214, 142, 91);
+
     grid-column: 1 /span 1;
     grid-row: 2/ span 1;
     display: flex;
@@ -62,7 +79,7 @@ body {
 }
 
 .zaloguj {
-    background-color: rgb(214, 142, 91);
+
     grid-column: 3 /span 1;
     grid-row: 2/ span 1;
     display: flex;
@@ -73,7 +90,7 @@ body {
 
 
 .koszyk {
-    background-color: rgb(214, 142, 91);
+
     grid-column: 2 /span 1;
     grid-row: 2/ span 1;
     display: flex;
@@ -86,7 +103,8 @@ body {
 .menu,
 .koszyk,
 .zaloguj {
-    border: 2px solid black;
+    background-color: #1e293b;
+    color: white;
     margin-top: 2%;
     margin-left: 3%;
     height: 90%;
@@ -99,13 +117,13 @@ body {
 .zaloguj:hover,
 .kup:hover {
     box-shadow: 5px 5px 10px black;
+    background-color: rgb(234, 88, 12);
 }
 
 
 .pos1 {
     grid-column: 2/ span 1;
     grid-row: 4 /span 1;
-    border: 3px solid gray;
     margin: 3%;
     display: flex;
     flex-direction: column;
@@ -113,6 +131,9 @@ body {
     justify-content: center;
     line-height: 200%;
     padding-bottom: 3%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 .pos1>img {
@@ -125,7 +146,8 @@ body {
     grid-column: 1/ span 1;
     grid-row: 6 /span 1;
     padding-left: 4%;
-    background-color: rgb(214, 142, 91);
+    background-color: #1e293b;
+    color: white;
     padding-top: 2%;
     padding-bottom: 2%;
 }
@@ -134,7 +156,8 @@ body {
     grid-column: 2/ span 1;
     padding-bottom: 2%;
     grid-row: 6 /span 1;
-    background-color: rgb(214, 142, 91);
+    background-color: #1e293b;
+    color: white;
     padding-top: 2%;
 }
 
@@ -143,13 +166,84 @@ body {
     grid-column: 3/ span 1;
     padding-bottom: 2%;
     grid-row: 6 /span 1;
-    background-color: rgb(214, 142, 91);
+    background-color: #1e293b;
+    color: white;
     padding-top: 2%;
 }
+
 
 
 .pomoc>h2,
 .karty>h2,
 .onas>h2 {
     text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5% 2%;
+        height: auto;
+    }
+
+    .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        padding-top: 2%;
+    }
+
+    .image>img {
+        width: 80%;
+        height: auto;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        font-size: 180%;
+        padding: 5px 0;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .menu,
+    .koszyk,
+    .zaloguj {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        height: 60px;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
+
+    .pomoc,
+    .karty,
+    .onas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 95%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    h2,
+    h3 {
+        font-size: 140%;
+    }
+
+    p {
+        font-size: 110%;
+    }
 }

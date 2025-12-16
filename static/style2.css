@@ -3,8 +3,21 @@
     padding: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap');
+
 body {
-    background: linear-gradient(to top, bisque, rgba(255, 228, 196, 0.589));
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    background-color: #f5f5f5;
     display: flex;
     padding-top: 5%;
     padding-bottom: 9%;
@@ -12,7 +25,8 @@ body {
 }
 
 .kontener {
-    background-color: rgb(214, 142, 91);
+    background-color: #1e293b;
+    color: white;
     border-radius: 20px;
     width: 23%;
 }
@@ -60,7 +74,17 @@ select {
     margin-left: 25%;
     border-radius: 10px;
     height: 25px;
+    background-color: #f97316;
+    color: white;
+    font-weight: 600;
 }
+
+.submit:hover,
+.reset:hover {
+    box-shadow: 5px 5px 10px black;
+    background-color: rgb(234, 88, 12);
+}
+
 
 .pomoc {
     grid-column: 1/ span 1;

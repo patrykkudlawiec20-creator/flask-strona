@@ -20,14 +20,20 @@
     <div class="menu">
         <h2>Kategorie</h2>
     </div>
-    <div class="koszyk">
-        <a href="{{ url_for('koszyk')}}">
+    <a class="koszyk" href="{{ url_for('koszyk')}}">
+        <div>
             <h2>Koszyk</h2>
-        </a>
-    </div>
-    <div class="zaloguj">
-        <h2><a href="{{ url_for('login_page') }}">Zaloguj</a></h2>
-    </div>
+        </div>
+
+    </a>
+
+    <a class="zaloguj" href="{{ url_for('login_page') }}">
+        <div>
+            <h2>Zaloguj</h2>
+        </div>
+
+    </a>
+
     <div class="wyszukaj">
         <input type="text" placeholder="Wyszukaj..">
     </div>
@@ -65,13 +71,11 @@
             <input type="number" class="numertel" placeholder="Numer telefonu">
         </div>
         <p>Zalecane jest zamówienie jako klient naszego sklepu <br>
-            W tym celu zaloguj się tutaj: <a href="{{ url_for('login_page') }}">Zaloguj</a>
+            W tym celu zaloguj się tutaj: <a class="link_log" href="{{ url_for('login_page') }}">Zaloguj</a>
         </p>
-        <div class="zamow">
-            <form action="/zakup" method="post">
-                <button type="submit" name="but" value="but_nike">Zamów</button>
-            </form>
-        </div>
+        <form action="/zakup" method="post">
+            <button class="zamow" type="submit" name="but" value="but_nike">Zamów</button>
+        </form>
     </div>
 
     <div class="pomoc">

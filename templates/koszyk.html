@@ -23,9 +23,12 @@
     <div class="koszyk">
         <h2>Koszyk</h2>
     </div>
-    <div class="zaloguj">
-        <h2><a href="{{ url_for('login_page') }}">Zaloguj</a></h2>
-    </div>
+    <a class="zaloguj" href="{{ url_for('login_page') }}">
+        <div>
+            <h2>Zaloguj</h2>
+        </div>
+
+    </a>
 
     <div class="pos1">
         <img src="{{ url_for('static', filename='img/but1.webp') }}" alt="">

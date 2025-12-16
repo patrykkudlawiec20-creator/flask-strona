@@ -3,19 +3,33 @@
     padding: 0;
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+
 body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 80px 100px 1fr 1fr 1fr;
     height: 100vh;
-    background-color: bisque;
+    background-color: #f5f5f5;
     padding-bottom: 8%;
 }
 
 .image {
     grid-column: 1/ span 1;
     grid-row: 1/ span 1;
-    background-color: rgb(214, 142, 91);
+    background-color: #1e293b;
     display: flex;
     align-items: center;
 }
@@ -28,7 +42,8 @@ body {
 .header {
     grid-column: 2 /span 2;
     grid-row: 1/ span 1;
-    background-color: rgb(214, 142, 91);
+    background-color: #1e293b;
+    color: white;
     display: flex;
     align-items: center;
     padding-left: 10%;
@@ -77,7 +92,6 @@ body {
 .pos4,
 .pos5,
 .pos6 {
-    border: 3px solid gray;
     margin: 3%;
     display: flex;
     flex-direction: column;
@@ -85,6 +99,9 @@ body {
     justify-content: center;
     line-height: 200%;
     padding-bottom: 3%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 .pos1>img,
@@ -130,7 +147,6 @@ input::placeholder {
 }
 
 .menu {
-    background-color: rgb(214, 142, 91);
     grid-column: 1 /span 1;
     grid-row: 2/ span 1;
     display: flex;
@@ -140,7 +156,6 @@ input::placeholder {
 }
 
 .zaloguj {
-    background-color: rgb(214, 142, 91);
     grid-column: 3 /span 1;
     grid-row: 2/ span 1;
     display: flex;
@@ -151,7 +166,6 @@ input::placeholder {
 
 
 .koszyk {
-    background-color: rgb(214, 142, 91);
     grid-column: 2 /span 1;
     grid-row: 2/ span 1;
     display: flex;
@@ -162,37 +176,37 @@ input::placeholder {
 
 
 .kup {
-    background-color: rgb(214, 142, 91);
     padding: 7%;
     padding-bottom: 4%;
     padding-top: 4%;
-    border: 2px solid black;
     border-radius: 10px;
     font-size: 150%;
     text-align: center;
+    background-color: #f97316;
+    color: white;
+    font-weight: 600;
 }
 
 .link {
     width: 40%;
-    color: black;
     text-decoration: none;
 }
 
 .koszyk,
 .zaloguj {
-    color: black;
     text-decoration: none;
 }
 
 .menu,
 .koszyk,
 .zaloguj {
-    border: 2px solid black;
     margin-top: 2%;
     margin-left: 3%;
     height: 90%;
     width: 90%;
     box-sizing: border-box;
+    background-color: #1e293b;
+    color: white;
 }
 
 h2 {
@@ -214,13 +228,15 @@ p {
 .zaloguj:hover,
 .kup:hover {
     box-shadow: 5px 5px 10px black;
+    background-color: rgb(234, 88, 12);
 }
 
 .pomoc {
     grid-column: 1/ span 1;
     grid-row: 6 /span 1;
     padding-left: 4%;
-    background-color: rgb(214, 142, 91);
+    background-color: #1e293b;
+    color: white;
     padding-top: 2%;
     padding-bottom: 2%;
 }
@@ -229,7 +245,8 @@ p {
     grid-column: 2/ span 1;
     padding-bottom: 2%;
     grid-row: 6 /span 1;
-    background-color: rgb(214, 142, 91);
+    background-color: #1e293b;
+    color: white;
     padding-top: 2%;
 }
 
@@ -238,7 +255,8 @@ p {
     grid-column: 3/ span 1;
     padding-bottom: 2%;
     grid-row: 6 /span 1;
-    background-color: rgb(214, 142, 91);
+    background-color: #1e293b;
+    color: white;
     padding-top: 2%;
 }
 
@@ -343,5 +361,16 @@ p {
         text-align: center;
         padding: 10px 0;
     }
+
+    .pos1,
+    .pos2,
+    .pos3,
+    .pos4,
+    .pos5,
+    .pos6 {
+        width: 95%;
+        max-width: 500px;
+    }
+
 
 }

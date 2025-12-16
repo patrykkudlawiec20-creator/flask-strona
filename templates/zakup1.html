@@ -20,18 +20,20 @@
     <div class="menu">
         <h2>Kategorie</h2>
     </div>
-    <div class="koszyk">
-        <a href="{{ url_for('koszyk')}}">
+    <a class="koszyk" href="{{ url_for('koszyk')}}">
+        <div>
             <h2>Koszyk</h2>
-        </a>
-    </div>
-    <div class="zaloguj">
-        <a href="{{ url_for('login_page') }}">
+        </div>
+
+    </a>
+    <a class="zaloguj" href="{{ url_for('login_page') }}">
+        <div>
             <h2>Zaloguj</h2>
-        </a>
-    </div>
+        </div>
+
+    </a>
     <div class="podziekowania">
-        <h3>Dziękujemy za zakup: </h3>
+        <h4>Dziękujemy za zakup: </h4>
     </div>
 
 
