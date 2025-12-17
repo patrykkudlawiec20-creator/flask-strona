@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+    <link rel="fonts" href="'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap'">
 </head>
 
 <body>
@@ -16,15 +17,13 @@
         </div>
         <form method="POST" action="{{ url_for('register_page') }}">
             <div class="inputy">
-                <label for="fname">Imię: <input type="text" id="fname" placeholder="Jan" required><br><br></label>
+                <label for="fname">Imię: <input type="text" id="fname" placeholder="Jan"><br><br></label>
 
-                <label for="sname">Nazwisko: <input type="text" id="sname" placeholder="Kowalski"
-                        required><br><br></label>
+                <label for="sname">Nazwisko: <input type="text" id="sname" placeholder="Kowalski"><br><br></label>
 
-                <label for="email">Email: <input type="text" id="email" placeholder="email@gmail.com"
-                        required><br><br></label>
+                <label for="email">Email: <input type="text" id="email" placeholder="email@gmail.com"><br><br></label>
 
-                <label for="birthday">Data urodzenia: <input type="date" id="birthday" required><br><br></label>
+                <label for="birthday">Data urodzenia: <input type="date" id="birthday"><br><br></label>
 
                 <label for="coutry">Obywatelstwo: <select id="coutry">
                         <option value="polska">Polska</option>
@@ -33,7 +32,7 @@
                         <option value="uk">Wielka Brytania</option>
                     </select><br><br></label>
                 <label for="tel">Numer telefony: <input type="tel" id="tel" placeholder="000-000-000"
-                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required><br><br></label>
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"><br><br></label>
                 <label>Płeć: </label>
                 <label for="mezczyzna"> Mężczyzna <input type="radio" id="mezczyzna" name="plec"
                         value="Mężczyzna"></label>
@@ -48,10 +47,14 @@
             </div>
         </form>
 
-        {% if msg %}
-        <p>{{ msg }}</p>
-        <p>Przejdz do panelu logowania: <a href="{{ url_for('login_page') }}">Panel Logowania</a></p>
-        {% endif %}
+        <div class="komunikaty">
+            {% if msg %}
+            <p>{{ msg }}</p>
+            <p>Przejdz do panelu logowania: <br><a href="{{ url_for('login_page') }}">Panel Logowania</a></p>
+            {% endif %}
+        </div>
+
+
 
     </div>
 </body>

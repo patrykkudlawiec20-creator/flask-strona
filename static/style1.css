@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: rgb(245, 245, 245);
     display: flex;
     padding-top: 5%;
     padding-bottom: 9%;
@@ -12,7 +12,6 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap');
 
 h1,
 h2,
@@ -22,7 +21,7 @@ h3 {
 
 
 .kontener {
-    background-color: #1e293b;
+    background-color: rgb(30, 41, 59);
     color: white;
     border-radius: 20px;
     width: 23%;
@@ -31,7 +30,6 @@ h3 {
 .header {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     padding-bottom: 2%;
     border-bottom: 1px solid black;
 }
@@ -84,7 +82,7 @@ button {
     width: 50%;
     height: 15%;
     border-radius: 5px;
-    background-color: #f97316;
+    background-color: rgb(249, 115, 22);
     color: white;
     font-weight: 600;
 }
@@ -105,31 +103,6 @@ button:hover {
     font-size: 80%;
 }
 
-.pomoc {
-    grid-column: 1/ span 1;
-    grid-row: 6 /span 1;
-    padding-left: 4%;
-    background-color: rgb(214, 142, 91);
-    padding-top: 2%;
-    padding-bottom: 2%;
-}
-
-.karty {
-    grid-column: 2/ span 1;
-    padding-bottom: 2%;
-    grid-row: 6 /span 1;
-    background-color: rgb(214, 142, 91);
-    padding-top: 2%;
-}
-
-
-.onas {
-    grid-column: 3/ span 1;
-    padding-bottom: 2%;
-    grid-row: 6 /span 1;
-    background-color: rgb(214, 142, 91);
-    padding-top: 2%;
-}
 
 
 .pomoc>h2,
@@ -138,9 +111,15 @@ button:hover {
     text-align: center;
 }
 
+.wyloguj {
+    text-align: center;
+    margin-top: 5%;
+}
+
 
 a {
     color: white;
+    font-weight: 600;
 }
 
 @media (max-width: 768px) {

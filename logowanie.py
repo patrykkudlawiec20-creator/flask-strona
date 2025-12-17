@@ -21,6 +21,7 @@ app = Flask(__name__)
 
 app.secret_key = os.getenv("SESSION_KEY")
 
+
 class Logowanie:
     def __init__(self):
         db = client["Logowanie"]
@@ -44,7 +45,10 @@ logowanie = Logowanie()
 
 @app.route("/")
 def sklep():
-    return render_template("index.html")
+    alert = request.args.get("alert")
+    return render_template("index.html", alert=alert)
+
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login_page():
@@ -56,9 +60,13 @@ def login_page():
 
         if msg == "Zalogowano pomyślnie":
             session['user'] = login_val
+            alert = 'alert("Zalogowano pomyślnie")'
 
-            return redirect(url_for('sklep'))
+            return redirect(url_for('sklep', alert=alert))
     return render_template("login.html", msg=msg)
+
+
+
 
 @app.route("/register", methods=["GET", "POST"])
 def register_page():
@@ -71,23 +79,39 @@ def register_page():
     
     return render_template("rejestracja.html", msg=msg)
 
+
+
+
 @app.route("/kupteraz_nike_run")
 def kupteraz1():
     return render_template("kupteraz1.html")
+
+
+
 
 @app.route("/kupteraz_nike")
 def kupteraz2():
     return render_template("kupteraz2.html")
 
 
+
+
+
 @app.route("/hoka_run")
 def kupteraz3():
     return render_template("kupteraz3.html")
 
+
+
+
 @app.route("/logout")
 def logout():
     session.clear()
-    return redirect(url_for('sklep'))
+    alert = 'alert("Pomyślnie wylogowano")'
+    return redirect(url_for('sklep', alert=alert))
+
+
+
 
 @app.route('/Koszyk')
 def koszyk():
@@ -125,6 +149,9 @@ def koszyk():
 
 
     return render_template('koszyk.html', nike_run=nike_run, but_nike=but_nike, hoka=hoka)
+
+
+
 
 @app.route("/zakup", methods=['GET', 'POST'])
 def zakup():
